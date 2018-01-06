@@ -2,20 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="study.wen.com.myapplication">
 
+    <!-- 权限设置 -->
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 外部存储读权限，调试工具加载本地补丁需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <meta-data
+        android:name="com.taobao.android.hotfix.IDSECRET"
+        android:value="24732881-1" />
+    <meta-data
+        android:name="com.taobao.android.hotfix.APPSECRET"
+        android:value="785662e1e565e3a23502db9e5eaa870e" />
+    <meta-data
+        android:name="com.taobao.android.hotfix.RSASECRET"
+        android:value="MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCMWe6FowN18MSxMRDcXQP5d/UvBwL8kGsilemztsQj/BTjKp0/SQNrU3OXjU7yYx4qyXwkI6hodFIQ5Uqtu6B+Cpdq6/VBsYg0WgLq9Ss09GPzOw0FKYYZA0fyiz5hu/l7cyRUoU0T3/9wpABangeAmWk+Nkoi91WdlDm83LTDXyJM/lkugU565QsxXt85nirS6zFt2OzRePesyBGQWOux8pk762diPHWvf57s1QWuNScwDqJIY59AHMJsaAqLETU3MBGPoYj8ObDiS7rH8/iY0ZQib3wCrF/F1mPPJ2O8GXl+xNMgggZJM14NsSjqYupg4c0WrTWG753sCpisntcFAgMBAAECggEAJqRsI6cqQMK1pQOZXNLPUVRR0Uzg6aDpnnAgFDbx8eZp6dHF0bLMmjQz0zo4zkuz9pva7ihTKc88+SHoWcUa/xjzb6DfueKjWaaevwoZh07yZfmQMCeqoCBjIshruIUEv5SIIDT4/8vgjKba4hg4gJO8gkB4UQBANk6lRvaNXmzeh73OuVu9d4O0EHTBPAAcoBcR2MAx0B0JdtIDtWKG0ehvWsBpyEqjTMSTeS8AIcutatwaPucIbZVtxlBUK/QHD2kZXFSEQose3v45DzApobWfriExVS26kI6lkLwoXvIRH9x4tlqdaqlNsIItgOaUC5l+9PUT/AqtmTaRjKVAgQKBgQDHFSFQ/mM/reQvWKaDWrH7e6bPNPwVjQV829ZBaOkeY718j6L6Sfk/HRRx66YMao5T391H+8H9GiTzuKLcK7OTn5TuC5pMCXAtLl16Ym6liJF/b/oro/9RrJzTelN1bheL0iMZBaK4zRQWh/pBkf2baCA+5hanb6iskiSYZZPFXQKBgQC0ekGdc+YeauwmpBnjb6xVBSdp4szqGqR9ULJUnhHSH4M9M848R5YS/36GMOASgb0yOGSVG0we0daBElfJzqZmIEIWN0aBkpq7dVHY68Y8KqZTLrqOiMxFdEqsF0lGR7r9XeWJCGGatCcbHjQ8e86ChtYtHLmdABXUoxqRvUVVyQKBgDTRE0y0oMolLTOudkbFChEpJgE1Emf5SOpuPHKQDcDlP0FLrjZu57Rp16G9ngkPQAFalA9j6HxoskMCyhpVccgJf26EH4RqwJsMAPrWIHrEN62ynJF1aehWPikQ/BFcityqfGtIBnq21cyAeNFqlPjk8CEf1ATJ59sYzqKr2D91AoGAXylHh7og0FEYi5djfyTW/U1mZtKLsbSyntD59twSEXVEQfUa/XXRj9rf3+nNfHSkSeKqRmTKUkXakNwXJfWsj5Taw9QJfTDMHaPSsEpBkF/8q0esXpOLAeQ7q1nr7P7NfeMQsJyWunfbVtUqPeoaDYEDVW4cAMiWujP2QnpGIOECgYAg9XAGedT4nwmt6vt60qVCz7Ze1fp3Q46IZul6cuL3zyTygJ5n2VKNEJhKEpqXfikqU4ldfmMjg5Z6b5c4Pb+IdLPmbZKZupRRaPD3+VhX2LuNPjhy05uXmf5DtCO1ja9DhIzx83mNg5a+DBa59jfj7lcKkybKeS5Y6c53qEf/EQ==" />
+
+
+
+    <!--  -->
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

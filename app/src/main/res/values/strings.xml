@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">WenStudy</string>
+
+    <!--励志语-->
+    <string name="lizhi">天行健，君子以自强不息\n\t\t\t地势坤，君子以厚德载物</string>
+    <!--login-->
+    <string name="action_sign_in">登\t\t录</string>
+    <string name="phone_hint">请输入手机号码</string>
+    <string name="psw_hint">请输入密码</string>
+    <string name="forget_psw">忘记密码</string>
+    <string name="get_invet">获取邀请码</string>
+
 </resources>
